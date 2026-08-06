@@ -1,3 +1,4 @@
+import {Download} from 'lucide-react'
 function Header() {
  
   const links = [
@@ -13,7 +14,7 @@ function Header() {
 
   return (
     <>
-      <header className='flex justify-between  bg-[#03060C] max-w-full p-3.5'>
+      <header className='flex justify-between  bg-[#03060C] w-full p-3.5'>
         <h2 className="text-[#6265FF]">A<span className="text-[#D5E0FC]">G</span></h2>
         <nav>
           {links.map((link) => (  

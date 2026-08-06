@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  /* background: #03060c; */
+  color: #f8fafc;
+  font-family: Inter, Arial, sans-serif;
+}

@@ -14,112 +14,68 @@ import  aws from "../assets/aws.png"
 import linux from "../assets/linux.png"
 import figma from "../assets/figma.png"
 function Skills() {
+  const skills = [
+    {name:"typescript",url:typescript},
+    {name:"javascript",url:javascript},
+    {name:"react",url:react},
+    {name:"nodejs",url:nodejs},
+    {name:"expressjs",url:expressjs},
+    {name:"nextjs",url:nextjs},
+    {name:"postgresql",url:postgresql},
+    {name:"mongodb",url:mongodb},
+    {name:"tailwindcss",url:tailwindcss},
+    {name:"redis",url:redis},
+    {name:"git",url:git},
+    {name:"docker",url:docker},
+    {name:"aws",url:aws},
+    {name:"linux",url:linux},
+    {name:"figma",url:figma},
+    
+  ]
   return (
-    <div className="bg-[#040910] w-full h-160">
-      <div className="m-5">
-         <h5>WHAT I USE</h5>
-         <h1 className="">Skills & Technologies</h1>
-         <p>Technologies i work with to bring ideas to life</p>
+    <div className="bg-[#040910] w-full  p-9 ">
+
+
+      <div className="text-white">
+         <p className="text-base text-blue-600">WHAT I USE</p>
+         <h1 className='text-2xl'>Skills & Technologies</h1>
+         <p className="text-sm text-gray-400">Technologies i work with to bring ideas to life</p>
       
       </div>
      
 
-      <div className="flex m-4 items-center">
-        <div>
-              <div className="w-6px h-40px">
-            <img src={typescript} className="w-full h-full object-contain " alt="hero background" />
+      <div className="flex m-4 items-center justify-center flex-wrap   gap-5 p-2">
+       
+              {
+                skills.map((skill)=>{
+                  return(
+                    <div className="bg-[#0C131D] p-6 rounded-2xl">
+                     <div className="w-6px">
+                    <img src={skill.url} className="w-full h-full object-contain " alt="hero background" />
+                    </div>
                 </div>
-        </div>
-        <div>
-            <div className="w-6px h-40px m-3">
-          <img src={javascript} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-        </div>
-  <div className="w-6px h-40px m-3">
-          <img src={react} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-        <div>
-          
-        </div>
-        
-        <div>
-           <div className="w-6px h-40px m-3">
-          <img src={nodejs} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-  
-        </div>
+                  )
 
-        <div>
-           <div className="w-6px h-40px m-3">
-          <img src={expressjs} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-  
-        </div>
-        <div>
-           <div className="w-6px h-40px m-3">
-          <img src={nextjs} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-  
-        </div>
-        <div>
-           <div className="w-6px h-40px m-3">
-          <img src={postgresql} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-  
-        </div>
-        <div>
-           <div className="w-6px h-40px m-3">
-          <img src={mongodb} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-  
-        </div>
+                })
+              }
+           
+      
+        
+
+        
+
 
       </div>
-        
-      <div  className="flex m-4 items-center">
-        <div>
-           <div className="w-6px h-40px m-3">
-          <img src={tailwindcss} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-        </div>
 
-        <div>
-            <div className="w-6px h-40px m-3">
-          <img src={redis} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-        </div>
-        <div>
-            <div className="w-6px h-40px m-3">
-          <img src={git} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-        </div>
-        <div>
-            <div className="w-6px h-40px m-3">
-          <img src={docker} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-        </div>
-        <div>
-            <div className="w-6px h-40px m-3">
-          <img src={aws} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-        </div>
-        <div>
-            <div className="w-6px h-40px m-3">
-          <img src={linux} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-        </div>
-        <div>
-            <div className="w-6px h-40px m-3">
-          <img src={figma} className="w-full h-full object-contain " alt="hero background" />
-            </div>
-        </div>
-      </div>
+      
+        
 
 
 
 
     </div>
-  )
+
+)
 }
 
 export default Skills

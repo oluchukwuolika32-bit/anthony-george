@@ -40,7 +40,9 @@ function Hero() {
 
         <div className="flex items-center bg-blue-600  w-1/2">
         <div className="w-fit h-fit">
-          <img src={hero} className="w-full h-full object-contain " alt="hero background" />
+          <img src={hero} className="w-full h-full object-contain " alt="hero background"
+           
+           />
 
         </div>
         
