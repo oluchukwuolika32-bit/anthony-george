@@ -14,11 +14,11 @@ function Header() {
 
   return (
     <>
-      <header className='flex justify-between  bg-[#03060C] w-full p-3.5'>
+      <header className='flex justify-between items-center  bg-[#03060C] w-full lg:p-3.5 p-2.5'>
         <h2 className="text-[#6265FF]">A<span className="text-[#D5E0FC]">G</span></h2>
-        <nav>
+        <nav className='hidden lg:block'>
           {links.map((link) => (  
-              <a href={link.href} className="m-9 text-white">{link.name}</a>
+              <a href={link.href} className="m-9">{link.name}</a>
           ))}
 
         </nav>
