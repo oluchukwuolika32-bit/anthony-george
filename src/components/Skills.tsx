@@ -50,7 +50,7 @@ function Skills() {
                 skills.map((skill)=>{
                   return(
                     <div className="bg-[#0C131D] p-6 rounded-2xl">
-                     <div className="w-6px">
+                     <div className="w-8.5">
                     <img src={skill.url} className="w-full h-full object-contain " alt="hero background" />
                     </div>
                 </div>

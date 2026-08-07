@@ -37,7 +37,7 @@ function Project(){
             projectCard.map((project)=>{
                 return       <div className="bg-[#0D141D]  rounded-3xl ">
                     <div className="bg-amber-200   rounded-2xl  m-2">
-                        <div className="w-6px h-55px ">
+                        <div className="w-1.5 h-13.75 ">
                             <img src={project.url} className="w-full h-full object-contain " alt="hero background" />
                         </div>  
                     </div>

@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(),tailwindcss()],
   server: {
     allowedHosts: [
-      'stretch-waving-virus.ngrok-free.dev'
+      '.ngrok-free.app'
     ]
   }
 })
