@@ -1,4 +1,5 @@
-import {Download,Menu} from 'lucide-react'
+import {Download,ChevronDownIcon} from 'lucide-react';
+import { useState } from 'react';
 function Header() {
  
   const links = [
@@ -9,12 +10,13 @@ function Header() {
     {name: 'Experience', href:'/experience'},
     {name: 'Contact', href:'/contact'}
   ]
-
+  const [hide,setHide] = useState(true);
 
 
   return (
+    
     <>
-      <header className='flex justify-between items-center  bg-[#03060C] w-full lg:p-3.5 p-2.5'>
+      <header className='flex justify-between items-center  bg-[#03060C] w-full lg:p-3.5 p-2.5 relative border-b border-b-amber-50'>
         <h2 className="text-[#6265FF]">A<span className="text-[#D5E0FC]">G</span></h2>
         <nav className='hidden lg:block'>
           {links.map((link) => (  
@@ -29,29 +31,29 @@ function Header() {
           
 
         </div>
-              <button className="lg:hidden text-white "><Menu/></button>
+              <button className="lg:hidden text-white " onClick={()=>setHide(!hide)}><ChevronDownIcon/></button>
+
+
+
+            <div className={`bg-[#03060C] text-1xl p-1 text-center absolute top-12 w-full right-0 ${hide ? 'hidden' : ''}`}>
+
+            {
+              links.map((link)=>(
+                   <div className=" w-full  lg:w-37 lg:h-15   text-center  p-2  border-b border-b-blue-500">
+                  <a href={link.href} className="m-9">{link.name}</a>
+              </div>
+
+              ))
+            }
+         
+           
+        </div>
 
         
      
         
       </header>
-         <div className='bg-[#03070D]  text-1xl p-1 text-center font-black'>
-           <div className="bg-[#06294d] from-20% w-full  lg:w-37 lg:h-15   text-center  p-2 ">
-              <p>Home</p>
-             </div>
-           <div className="bg-[#061b32] w-full  lg:w-37 lg:h-15   text-center  p-2 ">
-              <p>About</p>
-             </div>
-          <div className="bg-[#081f39] w-full  lg:w-37 lg:h-15   text-center  p-2 ">
-              <p>Skills</p>
-             </div>
-         <div className="bg-[#061a35] w-full  lg:w-37 lg:h-15  text-cent er  p-2 ">
-              <p>Experience</p>
-             </div>
-         <div className="bg-[#091f38] w-full  lg:w-37 lg:h-15   text-center  p-2 ">
-              <p>contact</p>
-             </div>
-        </div>
+      
     </>
   )
 }

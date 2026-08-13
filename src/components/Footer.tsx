@@ -35,7 +35,7 @@ function Footer() {
           <div className=" text-[#ABAFB5] ml-8 lg:ml-12">
             <h1 className="font-bold text-2xl text-white">Get in touch</h1>
             {/* <p>hellow@anthonygeorge.dev</p> */}
-            <p>+234 705 983 5772</p>
+            <p>+234 7047652134</p>
             <p>Lagos, Nigeria</p>
           </div>
         </div>
