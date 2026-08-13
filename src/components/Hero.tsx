@@ -38,7 +38,7 @@ function Hero() {
 
         </div>
 
-        <div className="flex items-center bg-blue-600 w-full lg:w-1/2">
+        <div className="flex items-center bg-[#040910] w-full lg:w-1/2">
         <div className="">
           <img src={hero} className="w-full h-full object-contain " alt="hero background"
            

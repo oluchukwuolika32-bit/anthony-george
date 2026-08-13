@@ -1,4 +1,4 @@
-import {Download} from 'lucide-react'
+import {Download,Menu} from 'lucide-react'
 function Header() {
  
   const links = [
@@ -22,9 +22,36 @@ function Header() {
           ))}
 
         </nav>
-        <button className="text-white">Download CV</button>
+        <div className='lg:flex items-center border-2 border-[#2A2759] p-2.5 rounded-2xl w-40 justify-between hidden'>
+          <button className="text-white">Download CV</button>
+    
+          <Download/>
+          
+
+        </div>
+              <button className="lg:hidden text-white "><Menu/></button>
+
+        
+     
         
       </header>
+         <div className='bg-[#03070D]  text-1xl p-1 text-center font-black'>
+           <div className="bg-[#06294d] from-20% w-full  lg:w-37 lg:h-15   text-center  p-2 ">
+              <p>Home</p>
+             </div>
+           <div className="bg-[#061b32] w-full  lg:w-37 lg:h-15   text-center  p-2 ">
+              <p>About</p>
+             </div>
+          <div className="bg-[#081f39] w-full  lg:w-37 lg:h-15   text-center  p-2 ">
+              <p>Skills</p>
+             </div>
+         <div className="bg-[#061a35] w-full  lg:w-37 lg:h-15  text-cent er  p-2 ">
+              <p>Experience</p>
+             </div>
+         <div className="bg-[#091f38] w-full  lg:w-37 lg:h-15   text-center  p-2 ">
+              <p>contact</p>
+             </div>
+        </div>
     </>
   )
 }
