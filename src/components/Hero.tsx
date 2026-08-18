@@ -1,4 +1,8 @@
 import hero from "../assets/hero.png";
+import github from"../assets/github.png";
+import link from "../assets/link.png";
+import twitter from"../assets/twitter.png";
+import email from "../assets/email.png"
 import{ Hand} from 'lucide-react'
 function Hero() {
   return (
@@ -33,7 +37,28 @@ function Hero() {
           </div>
 
           <div className="m-13">
+            <div className="lg:flex items-center">
+             
             <h1>Let's Connect</h1>
+<div className="flex items-center h-15 mb-1.5 ">
+              <div className="">
+                <img src={github} className="lg:w-15 h-35 object-contain "alt="hero background"/>
+              </div>
+
+              <div className="">
+                <img src={link} className="lg:w-15 h-35 object-contain " alt="hero background"/>
+              </div>
+
+              <div className="">
+                <img src={twitter} className="lg:w-15 h-35  object-contain " alt="hero background"/>
+              </div>
+
+               <div className="">
+                <img src={email} className="lg:w-15 h-35 object-contain " alt="hero background"/>
+              </div>
+
+</div>              
+            </div>
           </div>
 
         </div>
