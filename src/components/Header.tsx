@@ -1,17 +1,22 @@
 import {Download,ChevronDownIcon} from 'lucide-react';
 import { useState } from 'react';
+import { Outlet,NavLink } from 'react-router-dom';
 function Header() {
  
   const links = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    {name:'Skills', href:'/skills'},  
+    { name: 'About', href: 'home/about' },
+    { name: 'Projects', href: 'home/projects' },
+    {name:'Skills', href:'home/skills'},  
     {name: 'Contact', href:'/contact'}
   ]
   const [hide,setHide] = useState(true);
-
-
+  
+  const navLinkStyle = ({ isActive }:any) => ({
+  color: isActive ? '#007bff' : '#555',
+  fontWeight: isActive ? 'bold' : 'normal',
+  padding: '5px 10px'
+});
   return (
     
     <>
@@ -19,7 +24,7 @@ function Header() {
         <h2 className="text-[#6265FF]">A<span className="text-[#D5E0FC]">G</span></h2>
         <nav className='hidden lg:block'>
           {links.map((link) => (  
-              <a href={link.href} className="m-9">{link.name}</a>
+              <NavLink to={link.href} className="m-9" style={navLinkStyle}>{link.name}</NavLink>
           ))}
 
         </nav>
@@ -39,7 +44,7 @@ function Header() {
             {
               links.map((link)=>(
                    <div className=" w-full  lg:w-37 lg:h-15   text-center  p-2  border-b border-b-blue-500">
-                  <a href={link.href} className="m-9">{link.name}</a>
+                  <NavLink to={link.href} className="m-9" style={navLinkStyle}>{link.name}</NavLink>
               </div>
 
               ))
@@ -52,7 +57,7 @@ function Header() {
      
         
       </header>
-      
+      <Outlet/>
     </>
   )
 }

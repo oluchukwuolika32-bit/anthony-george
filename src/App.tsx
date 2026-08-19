@@ -1,19 +1,24 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Footer from './components/Footer'
-import Skills from './components/Skills'
-import Project from './components/Project'
+import { BrowserRouter,Link,Route,Routes} from 'react-router-dom'
+import HomePage from './HomePage'
+import Privacy from './components/Privacy'
+
 
 function App() {
 
   return (
-    <>
-      <Header />
-      <Hero />
-      <Project/>
-      <Skills/>
-      <Footer/>
-    </>
+  
+    <BrowserRouter>
+
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/privacy' element={<Privacy/>}/>
+          <Route path='/contact/:userName' element={<Privacy/>} />
+        </Routes>
+    
+    </BrowserRouter>
+
+
+
      
     
   )

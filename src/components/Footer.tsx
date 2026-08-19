@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 function Footer() {
   return (
     <>
@@ -43,6 +44,8 @@ function Footer() {
       </div>
       <div className=" bg-[#030911] text-center ">
         <h1 className="text-amber-50 pb-8">@ 2025 Anthony George. All rights reserved.</h1>
+     
+         <Link to="/privacy">Privacy</Link>
       </div>
     </>
   )
